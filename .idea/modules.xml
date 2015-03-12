@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/components/analytics-dashboard/analytics-dashboard.iml" filepath="$PROJECT_DIR$/components/analytics-dashboard/analytics-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/analytics-dashboard/analytics-dashboard-stub/analytics-dashboard-stub.iml" filepath="$PROJECT_DIR$/analytics-dashboard/analytics-dashboard-stub/analytics-dashboard-stub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/carbon-analytics.iml" filepath="$PROJECT_DIR$/carbon-analytics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/org.wso2.carbon.analytics.dashboard.admin.iml" filepath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/org.wso2.carbon.analytics.dashboard.admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.stub/org.wso2.carbon.analytics.dashboard.stub.iml" filepath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.stub/org.wso2.carbon.analytics.dashboard.stub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.ui/org.wso2.carbon.analytics.dashboard.ui.iml" filepath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.ui/org.wso2.carbon.analytics.dashboard.ui.iml" />
+    </modules>
+  </component>
+</project>

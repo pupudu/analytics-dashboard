@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1426149497029
+Build-Jdk: 1.7.0_07
+Built-By: dodan
+Bundle-Description: Analytics Dashboard Admin
+Bundle-DocURL: http://www.wso2.org/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: org.wso2.carbon.analytics.dashboard.admin
+Bundle-SymbolicName: org.wso2.carbon.analytics.dashboard.admin
+Bundle-Vendor: WSO2
+Bundle-Version: 1.0.3.SNAPSHOT
+Carbon-Component: UIBundle
+Created-By: Apache Maven Bundle Plugin
+DynamicImport-Package: *
+Export-Package: org.wso2.carbon.analytics.dashboard.admin.data;version="
+ 1.0.3.SNAPSHOT",org.wso2.carbon.analytics.dashboard.admin;uses:="org.ap
+ ache.commons.io.output,org.apache.commons.logging,org.codehaus.jackson.
+ map,org.wso2.carbon.registry.api,org.wso2.carbon.core,org.codehaus.jack
+ son,org.wso2.carbon.context";version="1.0.3.SNAPSHOT"
+Import-Package: org.apache.commons.io.output;resolution:=optional;versio
+ n="[2.0,3)",org.apache.commons.logging;resolution:=optional;version="[1
+ .2,2)",org.codehaus.jackson;resolution:=optional;version="[1.8,2)",org.
+ codehaus.jackson.map;resolution:=optional;version="[1.8,2)",org.wso2.ca
+ rbon.context;resolution:=optional;version="[4.3,5)",org.wso2.carbon.cor
+ e;resolution:=optional;version="[4.3,5)",org.wso2.carbon.registry.api;r
+ esolution:=optional;version="[1.0,2)",org.wso2.carbon.utils;version="[4
+ .3,5)"
+Tool: Bnd-1.50.0

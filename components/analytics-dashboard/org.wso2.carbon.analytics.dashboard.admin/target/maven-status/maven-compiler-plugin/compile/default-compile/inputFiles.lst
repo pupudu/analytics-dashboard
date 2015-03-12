@@ -1,0 +1,6 @@
+/home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.java
+/home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetPosition.java
+/home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetConfig.java
+/home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/DashboardMetaData.java
+/home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Widget.java
+/home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.java

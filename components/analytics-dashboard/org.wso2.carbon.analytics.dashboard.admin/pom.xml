@@ -16,7 +16,9 @@
  ~ limitations under the License.
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<parent>
         <groupId>org.wso2.carbon.analytics</groupId>
@@ -31,8 +33,21 @@
 	<name>WSO2 Carbon - Analytics Dashboard Admin</name>
 	<description>Analytics Dashboard Admin</description>
 
+    <repositories>
+        <repository>
+            <id>wso2-maven2-repository</id>
+            <url>http://dist.wso2.org/maven2</url>
+        </repository>
+        <repository>
+            <id>apache-maven2-repo</id>
+            <name>Apache Maven2 Repository</name>
+            <url>http://repo1.maven.org/maven2/</url>
+        </repository>
+    </repositories>
 
 	<dependencies>
+
+        <!-- carbon -->
 		<dependency>
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.core</artifactId>
@@ -51,7 +66,32 @@
 			<artifactId>org.wso2.carbon.analytics.dataservice</artifactId>
 			<scope>provided</scope>
 		</dependency>
-	</dependencies>
+
+
+        <!-- Jackson -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>1.8.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.8.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-jaxrs</artifactId>
+            <version>1.8.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20090211</version>
+        </dependency>
+
+    </dependencies>
 
 	<build>
 	        <plugins>
@@ -79,6 +119,16 @@
 	                    </instructions>
 	                </configuration>
 	            </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                    </configuration>
+                </plugin>
+
 	        </plugins>
 	    </build>
 	

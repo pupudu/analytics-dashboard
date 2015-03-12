@@ -3,8 +3,8 @@ package org.wso2.carbon.analytics.dashboard.admin.data;
 public class WidgetConfig {
 
     String chartType;
-    int x;
-    int y;
+    int xAxis;
+    int yAxis;
 
     public String getChartType() {
         return chartType;
@@ -14,19 +14,19 @@ public class WidgetConfig {
         this.chartType = chartType;
     }
 
-    public int getX() {
-        return x;
+    public int getxAxis() {
+        return xAxis;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public void setXAxis(int xAxis) {
+        this.xAxis = xAxis;
     }
 
-    public int getY() {
-        return y;
+    public int getYAxis() {
+        return yAxis;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public void setYAxis(int yAxis) {
+        this.yAxis = yAxis;
     }
 }

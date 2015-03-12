@@ -4,24 +4,15 @@ public class Widget {
 
     String id;
     String title;
-    Config config;
-    Position position;
-    Data data;
+    WidgetConfig config;
+    WidgetDimensions position;
 
-    public Config getConfig() {
+    public WidgetConfig getConfig() {
         return config;
     }
 
-    public void setConfig(Config config) {
+    public void setConfig(WidgetConfig config) {
         this.config = config;
-    }
-
-    public Data getData() {
-        return data;
-    }
-
-    public void setData(Data data) {
-        this.data = data;
     }
 
     public String getId() {
@@ -40,11 +31,11 @@ public class Widget {
         this.title = title;
     }
 
-    public Position getPosition() {
+    public WidgetDimensions getPosition() {
         return position;
     }
 
-    public void setPosition(Position position) {
+    public void setPosition(WidgetDimensions position) {
         this.position = position;
     }
 }

@@ -1,10 +1,13 @@
 package org.wso2.carbon.analytics.dashboard.admin.data;
 
+import java.util.ArrayList;
+
 public class Dashboard {
 
     int id;
     String title;
     String group;
+    ArrayList<String> widgets =new ArrayList<>();
 
     public String getTitle() {
         return title;
@@ -28,5 +31,13 @@ public class Dashboard {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public ArrayList<String> getWidgets() {
+        return widgets;
+    }
+
+    public void setWidgets(ArrayList<String> widgets) {
+        this.widgets = widgets;
     }
 }
