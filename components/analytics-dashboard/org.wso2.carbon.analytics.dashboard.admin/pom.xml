@@ -85,11 +85,13 @@
             <version>1.8.6</version>
         </dependency>
 
+
         <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20090211</version>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>1.7.1</version>
         </dependency>
+
 
     </dependencies>
 

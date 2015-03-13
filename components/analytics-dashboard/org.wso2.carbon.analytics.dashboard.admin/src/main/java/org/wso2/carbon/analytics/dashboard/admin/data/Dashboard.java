@@ -7,6 +7,7 @@ public class Dashboard {
     int id;
     String title;
     String group;
+    ArrayList<String> roles=new ArrayList<>();
     ArrayList<String> widgets =new ArrayList<>();
 
     public String getTitle() {
@@ -33,6 +34,14 @@ public class Dashboard {
         this.id = id;
     }
 
+    public ArrayList<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(ArrayList<String> roles) {
+        this.roles = roles;
+    }
+
     public ArrayList<String> getWidgets() {
         return widgets;
     }
@@ -40,4 +49,6 @@ public class Dashboard {
     public void setWidgets(ArrayList<String> widgets) {
         this.widgets = widgets;
     }
+
+
 }

@@ -30,6 +30,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="org.wso2.carbon.analytics.dashboard.admin" target="1.7" />
+      <module name="org.wso2.carbon.analytics.dashboard.stub" target="1.7" />
       <module name="org.wso2.carbon.analytics.dashboard.ui" target="1.7" />
     </bytecodeTargetLevel>
   </component>

@@ -62,22 +62,13 @@ public class DataView {
         widgets.add(widget);
     }
 
-    public boolean deleteWidget(String targetWidgetID){
-        for(Widget widget: widgets){
-            if(widget.getId().equals(targetWidgetID)){
-                widgets.remove(widget);
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public Widget getWidget(String widgetID) {
-        for (Widget widget : widgets) {
-            if (widget.getId().equals(widgetID)) {
+    public Widget getWidget(String widgetID){
+        for(Widget widget:widgets){
+            if(widget.getId().equals(widgetID)){
                 return widget;
             }
         }
         return null;
     }
+
 }

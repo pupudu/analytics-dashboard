@@ -180,13 +180,13 @@ From: 'FasterXML' (http://fasterxml.com/)
   - Jackson-module-JAXB-annotations (http://wiki.fasterxml.com/JacksonJAXBAnnotations) com.fasterxml.jackson.module:jackson-module-jaxb-annotations:bundle:2.4.2
     License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
 
+From: 'Google, Inc.' (http://www.google.com)
+  - Gson (http://code.google.com/p/google-gson/) com.google.code.gson:gson:jar:1.7.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
 From: 'Hazelcast, Inc.' (http://www.hazelcast.com/)
   - hazelcast-all (http://www.hazelcast.com/hazelcast-all/) com.hazelcast:hazelcast-all:jar:3.2.6
     License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
-
-From: 'JSON' (http://json.org/)
-  - JSON (JavaScript Object Notation) (http://www.json.org/java/index.html) org.json:json:jar:20090211
-    License: provided without support or warranty  (http://www.json.org/license.html)
 
 From: 'MetaStuff Ltd.' (http://sourceforge.net/projects/dom4j)
   - dom4j (http://dom4j.org) dom4j:dom4j:jar:1.6.1

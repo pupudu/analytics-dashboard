@@ -1,7 +1,10 @@
 package org.wso2.carbon.analytics.dashboard.admin;
 
+import com.google.gson.Gson;
+import org.apache.axis2.AxisFault;
 import org.codehaus.jackson.JsonParser;
-import org.wso2.carbon.analytics.dashboard.admin.data.DataView;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.wso2.carbon.analytics.dashboard.admin.data.*;
 import org.wso2.carbon.core.AbstractAdmin;
 import org.wso2.carbon.context.CarbonContext;
 import org.wso2.carbon.context.RegistryType;
@@ -14,7 +17,11 @@ import org.apache.commons.io.output.StringBuilderWriter;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import javax.xml.crypto.Data;
+import java.io.BufferedReader;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class DashboardAdminService extends AbstractAdmin {
 
@@ -30,68 +37,86 @@ public class DashboardAdminService extends AbstractAdmin {
     private Log logger = LogFactory.getLog(DashboardAdminService.class);
 
     /** returns a dataview object which is read from the registry*/
-    public DataView getDataView(String name) {
-        DataView dataview=(DataView)readFromRegistry(DATAVIEWS_DIR + "name", DataView.class);
+    public DataView getDataView(String name) throws AxisFault {
+        DataView dataview=(DataView)readFromRegistry(DATAVIEWS_DIR + name, DataView.class);
         return dataview;
     }
 
     /**Saves a Registry resource with given dataview object as the resource content*/
-    public void setDataview(DataView dataview){
+    public void setDataview(DataView dataview) throws AxisFault {
         writeToRegistry(DATAVIEWS_DIR+dataview.getName(),dataview);
     }
 
-    /**Writes an object to the given registry url and registry type as a Json String*/
-    public void writeToRegistry(RegistryType registryType, String url, Object content) {
-        CarbonContext cctx = CarbonContext.getThreadLocalCarbonContext();
-        Registry registry = cctx.getRegistry(registryType);
-
-        try {
-            Resource resource = registry.newResource();
-            StringBuilderWriter writer = new StringBuilderWriter();
-            MappingJsonFactory factory = new MappingJsonFactory();
-            JsonGenerator generator = factory.createJsonGenerator(writer);
-            generator.writeObject(content);
-            resource.setContent(writer.toString());
-            resource.setMediaType("application/json");
-            registry.put(url, resource);
-            logger.debug("Object saved on " + registryType.toString() + " at " + url);
-
-        } catch (Exception re) {
-            System.err.println("Exception");
-            re.printStackTrace();
-        }
+    public void addWidget(String dataViewName, Widget widget) throws AxisFault {
+        DataView dataView=getDataView(dataViewName);
+        dataView.addWidget(widget);
+        setDataview(dataView);
     }
 
-    /**default registry type is System Governance*/
-    public void writeToRegistry(String url, Object Content) {
-        writeToRegistry(RegistryType.SYSTEM_GOVERNANCE, url, Content);
+    public DataView getWidget(String dataViewName, String widgetID) throws AxisFault {
+        DataView dataView=getDataView(dataViewName);
+        Widget widget = dataView.getWidget(widgetID);
+        dataView.setWidgets(null);
+        dataView.addWidget(widget);
+        return dataView;
+    }
+
+    public void setWidgets(String dataViewName,ArrayList<Widget> widgets) throws AxisFault {
+        DataView dataview=getDataView(dataViewName);
+        dataview.setWidgets(widgets);
+        setDataview(dataview);
+    }
+
+    public ArrayList<Widget> getWidgets(String dataViewName) throws AxisFault {
+        return getDataView(dataViewName).getWidgets();
+    }
+
+
+
+    /**Writes an object to the given registry url and registry type as a Json String
+     * @param url relative url to where the resource will be saved
+     * @param content data to be written to the registry as a json string. Must be a bean object(eg- String objects are not supported)
+     */
+    public void writeToRegistry( String url, Object content) throws AxisFault {
+        CarbonContext cctx = CarbonContext.getThreadLocalCarbonContext();
+        Registry registry = cctx.getRegistry(RegistryType.SYSTEM_GOVERNANCE);
+
+        try {
+            Gson gson=new Gson();
+
+            Resource resource = registry.newResource(); //new resource in the registry
+            resource.setContent(gson.toJson(content));
+
+            resource.setMediaType("application/json");
+            registry.put(url, resource);
+
+        } catch (Exception re) {
+            throw new AxisFault(re.getMessage(),re);
+        }
     }
 
     /**
      * Reads a json from the registry, maps into a given class and returns as an object
-     * @param registryType System Governance, User Govenrnanace, System Config, Local, etc
      * @param url relative url from where the resource will be read
      * @param targetClass target object type which the json content will be mapped into
      * @return
      */
-    public Object readFromRegistry(RegistryType registryType, String url, Class targetClass) {
-        Object content = null;
+    public Object readFromRegistry( String url ,Class targetClass) throws AxisFault {
         CarbonContext cctx = CarbonContext.getThreadLocalCarbonContext();
-        Registry registry = cctx.getRegistry(registryType);
+        Registry registry = cctx.getRegistry(RegistryType.SYSTEM_GOVERNANCE);
 
         try {
             Resource resource = registry.get(url);
-            MappingJsonFactory factory = new MappingJsonFactory();
-            JsonParser parser = factory.createJsonParser((InputStream) resource.getContentStream());
-            Object output = parser.readValueAs(targetClass.getClass());
+            Gson gson=new Gson();
+
+            InputStream contentStream = resource.getContentStream();
+            InputStreamReader isr=new InputStreamReader(contentStream);
+
+            System.out.println(isr.toString());
+            return gson.fromJson( isr, targetClass);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new AxisFault(e.getMessage(),e);
         }
-        return content;
     }
 
-    /**default registry type is System Governance*/
-    public Object readFromRegistry(String url,Class targetClass) {
-        return readFromRegistry(RegistryType.SYSTEM_GOVERNANCE, url,targetClass);
-    }
 }

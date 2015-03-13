@@ -14,7 +14,7 @@ public class WidgetConfig {
         this.chartType = chartType;
     }
 
-    public int getxAxis() {
+    public int getXAxis() {
         return xAxis;
     }
 
