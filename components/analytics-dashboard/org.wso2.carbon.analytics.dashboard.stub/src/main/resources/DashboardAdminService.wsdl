@@ -1,48 +1,253 @@
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-                  xmlns:ns1="http://org.apache.axis2/xsd"
-                  xmlns:ns="http://admin.dashboard.analytics.carbon.wso2.org"
-                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
-                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
-                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-                  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
-                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
-                  targetNamespace="http://admin.dashboard.analytics.carbon.wso2.org">
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://admin.dashboard.analytics.carbon.wso2.org" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ax23="http://data.admin.dashboard.analytics.carbon.wso2.org/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://admin.dashboard.analytics.carbon.wso2.org">
     <wsdl:documentation>DashboardAdminService</wsdl:documentation>
     <wsdl:types>
-        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://admin.dashboard.analytics.carbon.wso2.org">
-            <xs:element name="testService">
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://data.admin.dashboard.analytics.carbon.wso2.org/xsd">
+            <xs:complexType name="DataView">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="columns" nillable="true" type="xs:anyType"></xs:element>
+                    <xs:element minOccurs="0" name="dataSource" nillable="true" type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="type" nillable="true" type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="widgets" nillable="true" type="xs:anyType"></xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Widget">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="config" nillable="true" type="ax23:WidgetConfig"></xs:element>
+                    <xs:element minOccurs="0" name="id" nillable="true" type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="title" nillable="true" type="xs:string"></xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="WidgetConfig">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="XAxis" type="xs:int"></xs:element>
+                    <xs:element minOccurs="0" name="YAxis" type="xs:int"></xs:element>
+                    <xs:element minOccurs="0" name="chartType" nillable="true" type="xs:string"></xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Dashboard">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="group" nillable="true" type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="id" type="xs:int"></xs:element>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="roles" nillable="true" type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="title" nillable="true" type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="widgets" nillable="true" type="xs:anyType"></xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax24="http://data.admin.dashboard.analytics.carbon.wso2.org/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://admin.dashboard.analytics.carbon.wso2.org">
+            <xs:import namespace="http://data.admin.dashboard.analytics.carbon.wso2.org/xsd"></xs:import>
+            <xs:element name="getDataView">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element minOccurs="0" name="inbox" nillable="true" type="xs:string"></xs:element>
+                        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"></xs:element>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="testServiceResponse">
+            <xs:element name="getDataViewResponse">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"></xs:element>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax23:DataView"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getWidget">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="dataViewName" nillable="true" type="xs:string"></xs:element>
+                        <xs:element minOccurs="0" name="widgetID" nillable="true" type="xs:string"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getWidgetResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax23:DataView"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addDataview">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="dataview" nillable="true" type="ax23:DataView"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addWidget">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="dataViewName" nillable="true" type="xs:string"></xs:element>
+                        <xs:element minOccurs="0" name="widget" nillable="true" type="ax23:Widget"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="setWidgets">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="dataViewName" nillable="true" type="xs:string"></xs:element>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="widgets" nillable="true" type="ax23:Widget"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getWidgets">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="dataViewName" nillable="true" type="xs:string"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getWidgetsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ax23:Widget"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getDashboard">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="dashboardID" type="xs:int"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getDashboardResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax23:Dashboard"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addDashboard">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="dashboard" nillable="true" type="ax23:Dashboard"></xs:element>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
         </xs:schema>
     </wsdl:types>
-    <wsdl:message name="testServiceRequest">
-        <wsdl:part name="parameters" element="ns:testService"></wsdl:part>
+    <wsdl:message name="addDataviewRequest">
+        <wsdl:part name="parameters" element="ns:addDataview"></wsdl:part>
     </wsdl:message>
-    <wsdl:message name="testServiceResponse">
-        <wsdl:part name="parameters" element="ns:testServiceResponse"></wsdl:part>
+    <wsdl:message name="addWidgetRequest">
+        <wsdl:part name="parameters" element="ns:addWidget"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="setWidgetsRequest">
+        <wsdl:part name="parameters" element="ns:setWidgets"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getWidgetRequest">
+        <wsdl:part name="parameters" element="ns:getWidget"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getWidgetResponse">
+        <wsdl:part name="parameters" element="ns:getWidgetResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getDashboardRequest">
+        <wsdl:part name="parameters" element="ns:getDashboard"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getDashboardResponse">
+        <wsdl:part name="parameters" element="ns:getDashboardResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getWidgetsRequest">
+        <wsdl:part name="parameters" element="ns:getWidgets"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getWidgetsResponse">
+        <wsdl:part name="parameters" element="ns:getWidgetsResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="addDashboardRequest">
+        <wsdl:part name="parameters" element="ns:addDashboard"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getDataViewRequest">
+        <wsdl:part name="parameters" element="ns:getDataView"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getDataViewResponse">
+        <wsdl:part name="parameters" element="ns:getDataViewResponse"></wsdl:part>
     </wsdl:message>
     <wsdl:portType name="DashboardAdminServicePortType">
-        <wsdl:operation name="testService">
-            <wsdl:input message="ns:testServiceRequest" wsaw:Action="urn:testService"></wsdl:input>
-            <wsdl:output message="ns:testServiceResponse" wsaw:Action="urn:testServiceResponse"></wsdl:output>
+        <wsdl:operation name="addDataview">
+            <wsdl:input message="ns:addDataviewRequest" wsaw:Action="urn:addDataview"></wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="addWidget">
+            <wsdl:input message="ns:addWidgetRequest" wsaw:Action="urn:addWidget"></wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="setWidgets">
+            <wsdl:input message="ns:setWidgetsRequest" wsaw:Action="urn:setWidgets"></wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getWidget">
+            <wsdl:input message="ns:getWidgetRequest" wsaw:Action="urn:getWidget"></wsdl:input>
+            <wsdl:output message="ns:getWidgetResponse" wsaw:Action="urn:getWidgetResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDashboard">
+            <wsdl:input message="ns:getDashboardRequest" wsaw:Action="urn:getDashboard"></wsdl:input>
+            <wsdl:output message="ns:getDashboardResponse" wsaw:Action="urn:getDashboardResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getWidgets">
+            <wsdl:input message="ns:getWidgetsRequest" wsaw:Action="urn:getWidgets"></wsdl:input>
+            <wsdl:output message="ns:getWidgetsResponse" wsaw:Action="urn:getWidgetsResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="addDashboard">
+            <wsdl:input message="ns:addDashboardRequest" wsaw:Action="urn:addDashboard"></wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getDataView">
+            <wsdl:input message="ns:getDataViewRequest" wsaw:Action="urn:getDataView"></wsdl:input>
+            <wsdl:output message="ns:getDataViewResponse" wsaw:Action="urn:getDataViewResponse"></wsdl:output>
         </wsdl:operation>
     </wsdl:portType>
     <wsdl:binding name="DashboardAdminServiceSoap11Binding" type="ns:DashboardAdminServicePortType">
         <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap:binding>
-        <wsdl:operation name="testService">
-            <soap:operation soapAction="urn:testService" style="document"></soap:operation>
+        <wsdl:operation name="addDataview">
+            <soap:operation soapAction="urn:addDataview" style="document"></soap:operation>
+            <wsdl:input>
+                <soap:body use="literal"></soap:body>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="addWidget">
+            <soap:operation soapAction="urn:addWidget" style="document"></soap:operation>
+            <wsdl:input>
+                <soap:body use="literal"></soap:body>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="setWidgets">
+            <soap:operation soapAction="urn:setWidgets" style="document"></soap:operation>
+            <wsdl:input>
+                <soap:body use="literal"></soap:body>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getWidget">
+            <soap:operation soapAction="urn:getWidget" style="document"></soap:operation>
+            <wsdl:input>
+                <soap:body use="literal"></soap:body>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"></soap:body>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDashboard">
+            <soap:operation soapAction="urn:getDashboard" style="document"></soap:operation>
+            <wsdl:input>
+                <soap:body use="literal"></soap:body>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"></soap:body>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getWidgets">
+            <soap:operation soapAction="urn:getWidgets" style="document"></soap:operation>
+            <wsdl:input>
+                <soap:body use="literal"></soap:body>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"></soap:body>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="addDashboard">
+            <soap:operation soapAction="urn:addDashboard" style="document"></soap:operation>
+            <wsdl:input>
+                <soap:body use="literal"></soap:body>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getDataView">
+            <soap:operation soapAction="urn:getDataView" style="document"></soap:operation>
             <wsdl:input>
                 <soap:body use="literal"></soap:body>
             </wsdl:input>
@@ -53,8 +258,59 @@
     </wsdl:binding>
     <wsdl:binding name="DashboardAdminServiceSoap12Binding" type="ns:DashboardAdminServicePortType">
         <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap12:binding>
-        <wsdl:operation name="testService">
-            <soap12:operation soapAction="urn:testService" style="document"></soap12:operation>
+        <wsdl:operation name="addDataview">
+            <soap12:operation soapAction="urn:addDataview" style="document"></soap12:operation>
+            <wsdl:input>
+                <soap12:body use="literal"></soap12:body>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="addWidget">
+            <soap12:operation soapAction="urn:addWidget" style="document"></soap12:operation>
+            <wsdl:input>
+                <soap12:body use="literal"></soap12:body>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="setWidgets">
+            <soap12:operation soapAction="urn:setWidgets" style="document"></soap12:operation>
+            <wsdl:input>
+                <soap12:body use="literal"></soap12:body>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getWidget">
+            <soap12:operation soapAction="urn:getWidget" style="document"></soap12:operation>
+            <wsdl:input>
+                <soap12:body use="literal"></soap12:body>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"></soap12:body>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDashboard">
+            <soap12:operation soapAction="urn:getDashboard" style="document"></soap12:operation>
+            <wsdl:input>
+                <soap12:body use="literal"></soap12:body>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"></soap12:body>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getWidgets">
+            <soap12:operation soapAction="urn:getWidgets" style="document"></soap12:operation>
+            <wsdl:input>
+                <soap12:body use="literal"></soap12:body>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"></soap12:body>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="addDashboard">
+            <soap12:operation soapAction="urn:addDashboard" style="document"></soap12:operation>
+            <wsdl:input>
+                <soap12:body use="literal"></soap12:body>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getDataView">
+            <soap12:operation soapAction="urn:getDataView" style="document"></soap12:operation>
             <wsdl:input>
                 <soap12:body use="literal"></soap12:body>
             </wsdl:input>
@@ -65,13 +321,64 @@
     </wsdl:binding>
     <wsdl:binding name="DashboardAdminServiceHttpBinding" type="ns:DashboardAdminServicePortType">
         <http:binding verb="POST"></http:binding>
-        <wsdl:operation name="testService">
-            <http:operation location="testService"></http:operation>
+        <wsdl:operation name="addDataview">
+            <http:operation location="addDataview"></http:operation>
             <wsdl:input>
-                <mime:widgets type="text/xml" part="parameters"></mime:widgets>
+                <mime:content type="text/xml" part="parameters"></mime:content>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="addWidget">
+            <http:operation location="addWidget"></http:operation>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"></mime:content>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="setWidgets">
+            <http:operation location="setWidgets"></http:operation>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"></mime:content>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getWidget">
+            <http:operation location="getWidget"></http:operation>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"></mime:content>
             </wsdl:input>
             <wsdl:output>
-                <mime:widgets type="text/xml" part="parameters"></mime:widgets>
+                <mime:content type="text/xml" part="parameters"></mime:content>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDashboard">
+            <http:operation location="getDashboard"></http:operation>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"></mime:content>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"></mime:content>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getWidgets">
+            <http:operation location="getWidgets"></http:operation>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"></mime:content>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"></mime:content>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="addDashboard">
+            <http:operation location="addDashboard"></http:operation>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"></mime:content>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getDataView">
+            <http:operation location="getDataView"></http:operation>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"></mime:content>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"></mime:content>
             </wsdl:output>
         </wsdl:operation>
     </wsdl:binding>

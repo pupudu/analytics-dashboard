@@ -5,7 +5,6 @@ public class Widget {
     String id;
     String title;
     WidgetConfig config;
-    WidgetDimensions position;
 
     public WidgetConfig getConfig() {
         return config;
@@ -31,11 +30,4 @@ public class Widget {
         this.title = title;
     }
 
-    public WidgetDimensions getPosition() {
-        return position;
-    }
-
-    public void setPosition(WidgetDimensions position) {
-        this.position = position;
-    }
 }

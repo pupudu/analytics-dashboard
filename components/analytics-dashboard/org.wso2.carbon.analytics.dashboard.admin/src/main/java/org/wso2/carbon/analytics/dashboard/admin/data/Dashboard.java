@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class Dashboard {
 
-    int id;
+    String id;
     String title;
     String group;
-    ArrayList<String> roles=new ArrayList<>();
-    ArrayList<String> widgets =new ArrayList<>();
+    ArrayList<String> roles = new ArrayList<>();
+    ArrayList<WidgetMetaData> widgets = new ArrayList<>();
 
     public String getTitle() {
         return title;
@@ -26,11 +26,11 @@ public class Dashboard {
         this.group = group;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -42,11 +42,11 @@ public class Dashboard {
         this.roles = roles;
     }
 
-    public ArrayList<String> getWidgets() {
+    public ArrayList<WidgetMetaData> getWidgets() {
         return widgets;
     }
 
-    public void setWidgets(ArrayList<String> widgets) {
+    public void setWidgets(ArrayList<WidgetMetaData> widgets) {
         this.widgets = widgets;
     }
 

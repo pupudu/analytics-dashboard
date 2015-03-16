@@ -1,14 +1,16 @@
 package org.wso2.carbon.analytics.dashboard.admin.data;
 
+import org.apache.axis2.AxisFault;
+
 import java.util.ArrayList;
 
-public class DataView {
+public class DataView { //TODO add ID
     String name;
     String type;
     String dataSource;
-    ArrayList<String> columns = new ArrayList<>();
+    ArrayList<Column> columns = new ArrayList<>();
     String filter;
-    ArrayList<Widget> widgets =new ArrayList<>();
+    ArrayList<Widget> widgets = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -34,11 +36,11 @@ public class DataView {
         this.dataSource = dataSource;
     }
 
-    public ArrayList<String> getColumns() {
+    public ArrayList<Column> getColumns() {
         return columns;
     }
 
-    public void setColumns(ArrayList<String> columns) {
+    public void setColumns(ArrayList<Column> columns) {
         this.columns = columns;
     }
 
@@ -58,13 +60,27 @@ public class DataView {
         this.widgets = widgets;
     }
 
-    public void addWidget(Widget widget){   //TODO-change return type to boolean???
-        widgets.add(widget);
+    public void addWidget(Widget widget) throws AxisFault {
+        if (getWidget(widget.getId()) == null) {
+            widgets.add(widget);
+        } else {
+            throw new AxisFault("Widget with given ID already exists");
+        }
     }
 
-    public Widget getWidget(String widgetID){
-        for(Widget widget:widgets){
-            if(widget.getId().equals(widgetID)){
+    public void updateWidget(Widget widget) throws AxisFault {
+        Widget existingWidget = getWidget(widget.getId());
+        if (existingWidget != null) {
+            widgets.remove(existingWidget);
+            widgets.add(widget);
+        } else {
+            throw new AxisFault("Widget with given ID does not exist");
+        }
+    }
+
+    public Widget getWidget(String widgetID) {
+        for (Widget widget : widgets) {
+            if (widget.getId().equals(widgetID)) {
                 return widget;
             }
         }
