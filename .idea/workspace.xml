@@ -2,25 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76da25f2-658f-471a-a573-4e2540df6be7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Column.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetMetaData.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/DashboardMetaData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/WidgetPosition.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.class" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.class" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/DataView.class" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/DataView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/TestRegistry.class" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/TestRegistry.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/Widget.class" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/Widget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/org.wso2.carbon.analytics.dashboard.admin-1.0.3-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/org.wso2.carbon.analytics.dashboard.admin-1.0.3-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Column.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Column.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.stub/src/main/resources/DashboardAdminService.wsdl" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.stub/src/main/resources/DashboardAdminService.wsdl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/DataView.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/DataView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/META-INF/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/TestRegistry.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/TestRegistry.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Widget.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Widget.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetConfig.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetDimensions.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetDimensions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetMetaData.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetMetaData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="carbon-analytics.iws" />
@@ -55,11 +45,10 @@
       <file leaf-file-name="Dashboard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="756">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="389" max-vertical-offset="1170">
+              <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
               <folding>
-                <element signature="e#965#966#0" expanded="true" />
-                <element signature="e#1003#1004#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,13 +57,9 @@
       <file leaf-file-name="DataView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/DataView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1332">
+            <state vertical-scroll-proportion="0.0" vertical-offset="954" max-vertical-offset="1260">
               <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#894#895#0" expanded="true" />
-                <element signature="e#932#933#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,9 +67,11 @@
       <file leaf-file-name="Column.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Column.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="558">
+            <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="450">
               <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-              <folding />
+              <folding>
+                <element signature="e#191#192#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,8 +82,8 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
               <caret line="12" column="38" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="38" />
               <folding>
-                <element signature="e#254#255#0" expanded="true" />
-                <element signature="e#290#291#0" expanded="true" />
+                <element signature="e#230#231#0" expanded="true" />
+                <element signature="e#257#258#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,7 +95,7 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
               <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
               <folding>
-                <element signature="e#227#228#0" expanded="true" />
+                <element signature="e#209#210#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,8 +114,8 @@
       <file leaf-file-name="DashboardAdminService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4632207" vertical-offset="3439" max-vertical-offset="5220">
-              <caret line="204" column="29" selection-start-line="204" selection-start-column="29" selection-end-line="204" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.6063618" vertical-offset="5473" max-vertical-offset="5976">
+              <caret line="321" column="31" selection-start-line="321" selection-start-column="31" selection-end-line="321" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,8 +126,8 @@
       <file leaf-file-name="TestRegistry.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/TestRegistry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1242">
-              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="708" max-vertical-offset="1224">
+              <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,7 +138,7 @@
       <file leaf-file-name="WidgetConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
+            <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="468">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
@@ -278,9 +265,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="57" />
-    <option name="y" value="-4" />
+    <option name="y" value="21" />
     <option name="width" value="1543" />
-    <option name="height" value="904" />
+    <option name="height" value="879" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -305,6 +292,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -501,8 +490,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -513,10 +500,10 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="true" />
     <property name="FullScreen" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="options.lastSelected" value="configurable.group.build" />
+    <property name="options.lastSelected" value="preferences.sourceCode" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -587,27 +574,6 @@
       <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -628,6 +594,27 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -660,6 +647,19 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -686,19 +686,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -782,8 +769,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="-4" width="1543" height="904" extended-state="6" />
-    <editor active="true" />
+    <frame x="57" y="21" width="1543" height="879" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -791,7 +778,6 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49315068" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39975095" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.50032574" order="9" side_tool="true" content_ui="tabs" />
@@ -802,13 +788,14 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1257291" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2235904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2235904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3275649" sideWeight="0.49967426" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49315068" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24951394" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24951394" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -838,14 +825,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="468">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="931" max-vertical-offset="2322">
@@ -861,8 +840,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="792">
           <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
           <folding>
-            <element signature="e#965#966#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -871,11 +849,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="931" max-vertical-offset="1440">
           <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#932#933#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -883,7 +857,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="558">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
+          <folding>
+            <element signature="e#191#192#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -892,8 +868,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="486">
           <caret line="12" column="38" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="38" />
           <folding>
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -903,7 +879,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="558">
           <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
-            <element signature="e#227#228#0" expanded="true" />
+            <element signature="e#209#210#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -959,8 +935,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="468">
           <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="6" selection-end-column="17" />
           <folding>
-            <element signature="e#965#966#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -970,8 +945,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="648">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1000,7 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="810">
           <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1039,8 +1013,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="468">
           <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="6" selection-end-column="17" />
           <folding>
-            <element signature="e#965#966#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1050,8 +1023,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="648">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1079,8 +1052,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="468">
           <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="6" selection-end-column="17" />
           <folding>
-            <element signature="e#965#966#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1090,8 +1062,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="648">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1184,7 +1156,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7096774" vertical-offset="314" max-vertical-offset="810">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1202,45 +1173,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/TestRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1242">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetMetaData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="e#227#228#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetDimensions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Widget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="38" />
-          <folding>
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#191#192#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1257,11 +1191,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1332">
           <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#932#933#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1269,7 +1199,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22594142" vertical-offset="0" max-vertical-offset="1566">
           <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,25 +1206,69 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.719665" vertical-offset="3788" max-vertical-offset="4266">
           <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/TestRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="708" max-vertical-offset="1224">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.ui/src/test/java/org/wso2/carbon/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24418604" vertical-offset="0" max-vertical-offset="594">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Widget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="38" />
+          <folding>
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetMetaData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#209#210#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="756">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="389" max-vertical-offset="1170">
+          <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
           <folding>
-            <element signature="e#965#966#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetDimensions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4632207" vertical-offset="3439" max-vertical-offset="5220">
-          <caret line="204" column="29" selection-start-line="204" selection-start-column="29" selection-end-line="204" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.6063618" vertical-offset="5473" max-vertical-offset="5976">
+          <caret line="321" column="31" selection-start-line="321" selection-start-column="31" selection-end-line="321" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

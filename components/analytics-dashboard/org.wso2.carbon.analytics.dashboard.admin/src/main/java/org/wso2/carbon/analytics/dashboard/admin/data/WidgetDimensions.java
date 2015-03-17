@@ -1,41 +1,41 @@
 package org.wso2.carbon.analytics.dashboard.admin.data;
 
 public class WidgetDimensions {
-    int column;
-    int row;
-    int width;
-    int height;
+	int column;
+	int row;
+	int width;
+	int height;
 
-    public int getColumn() {
-        return column;
-    }
+	public int getColumn() {
+		return column;
+	}
 
-    public void setColumn(int column) {
-        this.column = column;
-    }
+	public void setColumn(int column) {
+		this.column = column;
+	}
 
-    public int getRow() {
-        return row;
-    }
+	public int getRow() {
+		return row;
+	}
 
-    public void setRow(int row) {
-        this.row = row;
-    }
+	public void setRow(int row) {
+		this.row = row;
+	}
 
-    public int getWidth() {
-        return width;
-    }
+	public int getWidth() {
+		return width;
+	}
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
+	public void setWidth(int width) {
+		this.width = width;
+	}
 
-    public int getHeight() {
-        return height;
-    }
+	public int getHeight() {
+		return height;
+	}
 
-    public void setHeight(int height) {
-        this.height = height;
-    }
+	public void setHeight(int height) {
+		this.height = height;
+	}
 
 }
