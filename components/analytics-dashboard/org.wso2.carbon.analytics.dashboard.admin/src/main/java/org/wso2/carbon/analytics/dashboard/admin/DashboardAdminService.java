@@ -1,31 +1,29 @@
 package org.wso2.carbon.analytics.dashboard.admin;
 
-import com.google.gson.Gson;
+import org.apache.axiom.om.OMElement;
+import org.apache.axiom.om.util.AXIOMUtil;
 import org.apache.axis2.AxisFault;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.wso2.carbon.analytics.dashboard.admin.data.Dashboard;
-import org.wso2.carbon.analytics.dashboard.admin.data.DataView;
-import org.wso2.carbon.analytics.dashboard.admin.data.Widget;
-import org.wso2.carbon.analytics.dashboard.admin.data.WidgetMetaData;
-import org.wso2.carbon.context.CarbonContext;
-import org.wso2.carbon.context.RegistryType;
+import org.wso2.carbon.analytics.dashboard.admin.data.*;
 import org.wso2.carbon.core.AbstractAdmin;
 import org.wso2.carbon.registry.api.Collection;
-import org.wso2.carbon.registry.api.Registry;
 import org.wso2.carbon.registry.api.RegistryException;
-import org.wso2.carbon.registry.api.Resource;
 
+import javax.xml.namespace.QName;
+import javax.xml.stream.XMLStreamException;
+import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class DashboardAdminService extends AbstractAdmin {
 
 	/**
-	 * Relative Registry locations for dataviews and dashboards
+	 * Relative Registry locations for dataViews and dashboards
 	 */
-	static final String DATAVIEWS_DIR = "/dataviews/";
+	static final String DATAVIEWS_DIR = "/dataViews/";
 	static final String DASHBOARDS_DIR = "/dashboards/";
 
 	/**
@@ -33,67 +31,91 @@ public class DashboardAdminService extends AbstractAdmin {
 	 */
 	private Log logger = LogFactory.getLog(DashboardAdminService.class);
 
-	public ArrayList<DataView> getDataViews() throws AxisFault, RegistryException {
+	/**
+	 * @return all the dataView objects saved in the registry
+	 * @throws AxisFault
+	 */
+	public ArrayList<DataView> getDataViews() throws AxisFault {    //TODO test1 passed
 		ArrayList<DataView> dataViews = new ArrayList<>();
-		Collection dataViewsCollection = getCollection(DATAVIEWS_DIR);
-		String[] resourceNames = dataViewsCollection.getChildren();
+		Collection dataViewsCollection = RegistryUtils.readCollection(DATAVIEWS_DIR);
+		String[] resourceNames;
+		try {
+			resourceNames = dataViewsCollection.getChildren();
+		}catch (RegistryException e){
+			throw new AxisFault(e.getMessage(),e);
+		}
 		for (String resourceName : resourceNames) {
-			DataView dataview = getDataView(resourceName.replace(DATAVIEWS_DIR, ""));
-			dataview.setWidgets(null);
-			dataViews.add(dataview);
+			DataView dataView = getDataView(resourceName.replace(DATAVIEWS_DIR, ""));
+			dataView.setWidgets(new ArrayList<Widget>());
+			dataViews.add(dataView);
 		}
 		return dataViews;
 	}
 
 	/**
-	 * returns a dataview object which is read from the registry
+	 * returns a dataView object which is read from the registry
 	 *
-	 * @param name
-	 * @return
+	 * @param dataViewID id of the target dataView to be read
+	 * @return DataView Object
 	 * @throws AxisFault
 	 */
-	public DataView getDataView(String name) throws AxisFault { //TODO not name, id
-		DataView dataview = (DataView) readFromRegistry(DATAVIEWS_DIR + name, DataView.class);
-		return dataview;
+	public DataView getDataView(String dataViewID) throws AxisFault {
+		return (DataView) RegistryUtils.readResource(DATAVIEWS_DIR + dataViewID, DataView.class);
 	}
 
 	/**
-	 * appends a dataview object to the registry with the dataview as the resource content
+	 * appends a dataView object to the registry with the dataView as the resource content
 	 *
-	 * @param dataview
+	 * @param dataView Object to be appended to the registry
 	 * @throws AxisFault
 	 */
-	public void addDataView(DataView dataview) throws AxisFault {
-		if (!isResourceExist(DATAVIEWS_DIR + dataview.getName())) {
-			writeToRegistry(DATAVIEWS_DIR + dataview.getName(), dataview);
+	public void addDataView(DataView dataView) throws AxisFault {   //TODO test this method
+
+		ArrayList<Widget> OMWidgets=dataView.getWidgets();
+		ArrayList<Column> OMColumns=dataView.getColumns();
+
+		ArrayList<Widget> parsedWidgets=new ArrayList<>();
+		ArrayList<Column> parsedColumns=new ArrayList<>();
+
+		for(int index=0;index<OMWidgets.size();index++){
+			parsedWidgets.add(RegistryUtils.parseWidget((OMElement)OMWidgets.get(index)));
+		}
+
+		for(int index=0;index<OMColumns.size();index++){
+			parsedColumns.add(RegistryUtils.parseColumn((OMElement)OMColumns.get(index)));
+		}
+		dataView.setWidgets(parsedWidgets);
+		dataView.setColumns(parsedColumns);
+
+		if (!RegistryUtils.isResourceExist(DATAVIEWS_DIR + dataView.getId())) {
+			RegistryUtils.writeResource(DATAVIEWS_DIR + dataView.getId(), dataView);
 		} else {
-			throw new AxisFault("DataView with name:" + dataview.getName() + " already exists");
+			throw new AxisFault("DataView with ID:" + dataView.getId() + " already exists");
 		}
 	}
 
 	/**
-	 * updates an existing dataview
+	 * updates an existing dataView
 	 *
-	 * @param dataview
-	 * @throws AxisFault if dataview does not exist
+	 * @param dataView object to be updated
+	 * @throws AxisFault if dataView does not exist
 	 */
-	public void updateDataView(DataView dataview) throws AxisFault {
-		if (isResourceExist(DATAVIEWS_DIR + dataview.getName())) {
-			writeToRegistry(DATAVIEWS_DIR + dataview.getName(), dataview);
+	public void updateDataView(DataView dataView) throws AxisFault {    //TODO test this method
+		if (RegistryUtils.isResourceExist(DATAVIEWS_DIR + dataView.getId())) {
+			RegistryUtils.writeResource(DATAVIEWS_DIR + dataView.getId(), dataView);
 		} else {
-			throw new AxisFault(
-					"DataView with given name does not exist"); //TODO - create new or send error message?
+			throw new AxisFault("DataView with given ID does not exist");
 		}
 	}
 
 	/**
-	 * deletes dataview resource with the given name
+	 * deletes dataView resource with the given name
 	 *
-	 * @param dataViewName
+	 * @param dataViewID id of the dataView to be deleted
 	 */
-	public void deleteDataView(String dataViewName) throws AxisFault {   //TODO update method
-		if (isResourceExist(DATAVIEWS_DIR + dataViewName)) {
-			//            deleteFromRegistry(DATAVIEWS_DIR + dataViewName);
+	public void deleteDataView(String dataViewID) throws AxisFault {    //TODO test 1 passed
+		if (RegistryUtils.isResourceExist(DATAVIEWS_DIR + dataViewID)) {
+			RegistryUtils.deleteResource(DATAVIEWS_DIR + dataViewID);
 		} else {
 			throw new AxisFault("DataView with given name does not exist");
 		}
@@ -102,12 +124,12 @@ public class DashboardAdminService extends AbstractAdmin {
 	/**
 	 * appends a widget to an existing DataView
 	 *
-	 * @param dataViewName existing dataview
-	 * @param widget       widget to be appended
+	 * @param dataViewID existing dataView
+	 * @param widget     widget to be appended
 	 * @throws AxisFault
 	 */
-	public void addWidget(String dataViewName, Widget widget) throws AxisFault {
-		DataView dataView = getDataView(dataViewName);
+	public void addWidget(String dataViewID, Widget widget) throws AxisFault {
+		DataView dataView = getDataView(dataViewID);
 		dataView.addWidget(widget);
 		updateDataView(dataView);
 	}
@@ -115,12 +137,12 @@ public class DashboardAdminService extends AbstractAdmin {
 	/**
 	 * updates a widget of an existing DataView
 	 *
-	 * @param dataViewName existing dataview
-	 * @param widget       widget to be updated
+	 * @param dataViewID existing dataView
+	 * @param widget     widget to be updated
 	 * @throws AxisFault
 	 */
-	public void updateWidget(String dataViewName, Widget widget) throws AxisFault {
-		DataView dataView = getDataView(dataViewName);
+	public void updateWidget(String dataViewID, Widget widget) throws AxisFault {
+		DataView dataView = getDataView(dataViewID);
 		dataView.updateWidget(widget);
 		updateDataView(dataView);
 	}
@@ -128,82 +150,79 @@ public class DashboardAdminService extends AbstractAdmin {
 	//TODO nice to have feature- when dimensions are not given, find a place for it from the server side
 
 	/**
-	 * Returns a dataview object with a SINGLE widget
+	 * Returns a dataView object with a SINGLE widget
 	 *
-	 * @param dataViewName dataview name in which the target widget resides
-	 * @param widgetID     widget to be included in the dataview object
-	 * @return
+	 * @param dataViewID dataView name in which the target widget resides
+	 * @param widgetID   widget to be included in the dataView object
+	 * @return a DataView object with a single widget in the widget array-list
 	 * @throws AxisFault
 	 */
-	public DataView getWidget(String dataViewName, String widgetID) throws AxisFault {
-		DataView dataView = getDataView(dataViewName);
+	public DataView getWidget(String dataViewID, String widgetID) throws AxisFault {    //TODO fix exception
+		DataView dataView = getDataView(dataViewID);
 		Widget widget = dataView.getWidget(widgetID);
-		dataView.setWidgets(null);
+		dataView.setWidgets(new ArrayList<Widget>());
 		dataView.addWidget(widget);
 		return dataView;
 	}
 
 	/**
-	 * Replaces the widget list of an existing dataview
+	 * Replaces the widget list of an existing dataView
 	 *
-	 * @param dataViewName
-	 * @param widgets
+	 * @param dataViewID target dataView in which the widgets will be replaced
+	 * @param widgets    list of widgets which will replace the existing widgets
 	 * @throws AxisFault
 	 */
-	public void setWidgets(String dataViewName, ArrayList<Widget> widgets) throws AxisFault {
-		DataView dataview = getDataView(dataViewName);
-		dataview.setWidgets(widgets);
-		updateDataView(dataview);
+	public void setWidgets(String dataViewID, ArrayList<Widget> widgets) throws AxisFault {
+		DataView dataView = getDataView(dataViewID);
+		dataView.setWidgets(widgets);
+		updateDataView(dataView);
 	}
 
 	/**
-	 * Returns the widget list of given dataview as an array
-	 *
-	 * @param dataViewName
-	 * @return
+	 * @param dataViewID target dataView
+	 * @return the widget list of given dataView as an array
 	 * @throws AxisFault
 	 */
-	public ArrayList<Widget> getWidgets(String dataViewName) throws AxisFault {
-		return getDataView(dataViewName).getWidgets();
+	public ArrayList<Widget> getWidgets(String dataViewID) throws AxisFault {
+		return getDataView(dataViewID).getWidgets();
 	}
 
 	/**
-	 * @return All the existing dashboards as an Arraylist
+	 * @return All the existing dashboards as an Array-list
 	 * @throws AxisFault
 	 * @throws RegistryException
 	 */
 	public ArrayList<Dashboard> getDashboards() throws AxisFault, RegistryException {
 		ArrayList<Dashboard> dashboards = new ArrayList<>();
-		Collection dashboardsCollection = getCollection(DASHBOARDS_DIR);
+		Collection dashboardsCollection = RegistryUtils.readCollection(DASHBOARDS_DIR);
 		String[] resourceNames = dashboardsCollection.getChildren();
 		for (String resourceName : resourceNames) {
 			Dashboard dashboard = getDashboard(resourceName.replace(DASHBOARDS_DIR, ""));
-			dashboard.setWidgets(null);
+			dashboard.setWidgets(new ArrayList<WidgetMetaData>());
 			dashboards.add(dashboard);
 		}
 		return dashboards;
 	}
 
 	/**
-	 * Returns a complete dashboard
-	 *
-	 * @param dashboardID
-	 * @return
+	 * @param dashboardID target dashboard ID
+	 * @return a dashboard with widget-meta-Data
 	 * @throws AxisFault
 	 */
 	public Dashboard getDashboard(String dashboardID) throws AxisFault {
-		return (Dashboard) readFromRegistry(dashboardID, Dashboard.class);
+		return (Dashboard) RegistryUtils.readResource(dashboardID, Dashboard.class);
 	}
 
 	/**
 	 * Adds a new dashboard to the registry, does not allow to replace existing dashboard
 	 *
-	 * @param dashboard
+	 * @param dashboard object to be appended to the registry
 	 * @throws AxisFault
 	 */
 	public void addDashboard(Dashboard dashboard) throws AxisFault {
-		if (!isResourceExist(DASHBOARDS_DIR + dashboard.getId())) {
-			writeToRegistry(DASHBOARDS_DIR + dashboard.getId(), dashboard);
+		if (!RegistryUtils.isResourceExist(DASHBOARDS_DIR + dashboard.getId())) {
+
+			RegistryUtils.writeResource(DASHBOARDS_DIR + dashboard.getId(), dashboard);
 		} else {
 			throw new AxisFault("Dashboard with name:" + dashboard.getId() + " already exists");
 		}
@@ -212,115 +231,37 @@ public class DashboardAdminService extends AbstractAdmin {
 	/**
 	 * Updates an existing dashboard
 	 *
-	 * @param dashboard
+	 * @param dashboard object to be updated
 	 * @throws AxisFault if dashboard does not exist
 	 */
 	public void updateDashboard(Dashboard dashboard) throws AxisFault {
-		if (isResourceExist(DASHBOARDS_DIR + dashboard.getId())) {
-			writeToRegistry(DASHBOARDS_DIR + dashboard.getId(), dashboard);
+		if (RegistryUtils.isResourceExist(DASHBOARDS_DIR + dashboard.getId())) {
+			RegistryUtils.writeResource(DASHBOARDS_DIR + dashboard.getId(), dashboard);
 		} else {
 			throw new AxisFault("Dashboard with name:" + dashboard.getId() + " does not exist");
 		}
 	}
 
+	/**
+	 * @param dashboardID Id of the dashboard to which the widget-meta-data will be appended
+	 * @param widget metadata to be appended
+	 * @throws AxisFault
+	 */
 	public void addWidgetToDashboard(String dashboardID, WidgetMetaData widget) throws AxisFault {
 		Dashboard dashboard = getDashboard(dashboardID);
 		dashboard.addWidget(widget);
 		updateDashboard(dashboard);
 	}
 
+	/**
+	 * @param dashboardID Id of the dashboard to which the widget-meta-data will be updated
+	 * @param widget metadata to be updated
+	 * @throws AxisFault
+	 */
 	public void updateWidgetInDashboard(String dashboardID, WidgetMetaData widget)
 			throws AxisFault {
 		Dashboard dashboard = getDashboard(dashboardID);
 		dashboard.updateWidget(widget);
 		updateDashboard(dashboard);
-	}
-
-	/**
-	 * Writes an object to the given registry url and registry type as a Json String
-	 *
-	 * @param url     relative url to where the resource will be saved
-	 * @param content data to be written to the registry as a json string. Must be a bean object(eg- String objects are not supported)
-	 */
-	private void writeToRegistry(String url, Object content) throws AxisFault {     //TODO method name- writeResource?
-		CarbonContext cctx = CarbonContext.getThreadLocalCarbonContext();
-		Registry registry = cctx.getRegistry(RegistryType.SYSTEM_GOVERNANCE);
-
-		try {
-			Gson gson = new Gson();
-
-			Resource resource = registry.newResource(); //new resource in the registry
-			resource.setContent(gson.toJson(content));
-
-			resource.setMediaType("application/json");
-			registry.put(url, resource);
-
-		} catch (Exception re) {
-			throw new AxisFault(re.getMessage(), re);
-		}
-	}
-
-	/**
-	 * Reads a json from the registry, maps into a given class and returns as an object
-	 *
-	 * @param url         relative url from where the resource will be read
-	 * @param targetClass target object type which the json content will be mapped into
-	 * @return
-	 */
-	private Object readFromRegistry(String url, Class targetClass) throws AxisFault {   //TODO method name - readResource?
-		CarbonContext cctx = CarbonContext.getThreadLocalCarbonContext();
-		Registry registry = cctx.getRegistry(RegistryType.SYSTEM_GOVERNANCE);
-
-		try {
-			Resource resource = registry.get(url);
-			Gson gson = new Gson();
-
-			InputStream contentStream = resource.getContentStream();
-			InputStreamReader isr = new InputStreamReader(contentStream);
-
-			return gson.fromJson(isr, targetClass);
-
-		} catch (Exception e) {
-			throw new AxisFault(e.getMessage(), e);
-		}
-	}
-
-	/**
-	 * Checks if a resource with given name(url->location+resource name) exits in the registry
-	 *
-	 * @param url
-	 * @return true if resource exists
-	 * @throws AxisFault
-	 */
-	private boolean isResourceExist(String url) throws AxisFault {
-		CarbonContext cctx = CarbonContext.getThreadLocalCarbonContext();
-		Registry registry = cctx.getRegistry(RegistryType.SYSTEM_GOVERNANCE);
-		try {
-			return registry.resourceExists(url);
-		} catch (RegistryException e) {
-			throw new AxisFault(e.getMessage(), e);
-		}
-	}
-
-	/**
-	 * Get all the resources in a directory url as a Collection
-	 * @param collectionURL
-	 * @return Collection
-	 * @throws RegistryException
-	 */
-	public Collection getCollection(String collectionURL) throws RegistryException {
-		CarbonContext cctx = CarbonContext.getThreadLocalCarbonContext();
-		Registry registry = cctx.getRegistry(RegistryType.SYSTEM_GOVERNANCE);
-		return (Collection) registry.get(collectionURL);
-	}
-
-	private void deleteFromRegistry(String url) throws AxisFault {  //TODO method name- deleteResource??
-		CarbonContext cctx = CarbonContext.getThreadLocalCarbonContext();
-		Registry registry = cctx.getRegistry(RegistryType.SYSTEM_GOVERNANCE);
-		try {
-			registry.delete(url);
-		} catch (Exception e) {
-			throw new AxisFault(e.getMessage(), e);
-		}
 	}
 }

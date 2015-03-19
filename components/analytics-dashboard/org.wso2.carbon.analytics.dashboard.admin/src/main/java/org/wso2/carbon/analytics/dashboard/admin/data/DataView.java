@@ -4,20 +4,29 @@ import org.apache.axis2.AxisFault;
 
 import java.util.ArrayList;
 
-public class DataView { //TODO add ID
-	String name;
+public class DataView {
+	String id;
+	String displayName;
 	String type;
 	String dataSource;
 	ArrayList<Column> columns = new ArrayList<>();
 	String filter;
 	ArrayList<Widget> widgets = new ArrayList<>();
 
-	public String getName() {
-		return name;
+	public String getId() {
+		return id;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getDisplayName() {
+		return displayName;
+	}
+
+	public void setDisplayName(String displayName) {
+		this.displayName = displayName;
 	}
 
 	public String getType() {
@@ -61,6 +70,9 @@ public class DataView { //TODO add ID
 	}
 
 	public void addWidget(Widget widget) throws AxisFault {
+		if(widgets==null){
+			widgets=new ArrayList<>();
+		}
 		if (getWidget(widget.getId()) == null) {
 			widgets.add(widget);
 		} else {
@@ -79,6 +91,9 @@ public class DataView { //TODO add ID
 	}
 
 	public Widget getWidget(String widgetID) {
+		if(widgets==null){
+			return null;
+		}
 		for (Widget widget : widgets) {
 			if (widget.getId().equals(widgetID)) {
 				return widget;

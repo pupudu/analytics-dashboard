@@ -53,8 +53,8 @@ public class Dashboard {
 	}
 
 	public void addWidget(WidgetMetaData widget) throws AxisFault {
-		for(WidgetMetaData existingWidget:widgets){
-			if(existingWidget.getId().equals(widget.getId())){
+		for (WidgetMetaData existingWidget : widgets) {
+			if (existingWidget.getId().equals(widget.getId())) {
 				throw new AxisFault("Widget with given ID already exists in the dashboard");
 			}
 		}
@@ -67,8 +67,8 @@ public class Dashboard {
 	}
 
 	public void deleteWidget(String widgetID) throws AxisFault {
-		for(WidgetMetaData existingWidget:widgets){
-			if(existingWidget.getId().equals(widgetID)){
+		for (WidgetMetaData existingWidget : widgets) {
+			if (existingWidget.getId().equals(widgetID)) {
 				widgets.remove(existingWidget);
 				return;
 			}

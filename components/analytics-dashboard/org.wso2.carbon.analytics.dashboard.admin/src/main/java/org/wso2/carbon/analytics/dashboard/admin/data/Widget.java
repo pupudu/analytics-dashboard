@@ -4,13 +4,13 @@ public class Widget {
 
 	String id;
 	String title;
-	WidgetConfig config;
+	String config;
 
-	public WidgetConfig getConfig() {
+	public String getConfig() {
 		return config;
 	}
 
-	public void setConfig(WidgetConfig config) {
+	public void setConfig(String config) {
 		this.config = config;
 	}
 
