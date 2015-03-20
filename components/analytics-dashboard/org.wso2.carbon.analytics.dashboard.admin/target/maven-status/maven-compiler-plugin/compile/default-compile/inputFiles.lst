@@ -1,9 +1,9 @@
-/home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/TestRegistry.java
 /home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.java
 /home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Column.java
 /home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/RegistryUtils.java
+/home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/OMUtils.java
+/home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Role.java
 /home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetDimensions.java
-/home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetConfig.java
 /home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetMetaData.java
 /home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Widget.java
 /home/dodan/Programs/analytics-dashboard/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/DataView.java
