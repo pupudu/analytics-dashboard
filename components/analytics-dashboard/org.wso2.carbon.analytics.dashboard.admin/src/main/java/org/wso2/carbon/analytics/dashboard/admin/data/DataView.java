@@ -17,7 +17,9 @@ package org.wso2.carbon.analytics.dashboard.admin.data;
 
 import org.apache.axis2.AxisFault;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class DataView {
@@ -25,9 +27,9 @@ public class DataView {
 	private String displayName;
 	private String type;
 	private String dataSource;
-	private List<Column> columns = new ArrayList<>();
+	private Column[] columns;
 	private String filter;
-	private List<Widget> widgets = new ArrayList<>();
+	private Widget[] widgets;
 
 	public String getId() {
 		return id;
@@ -61,11 +63,11 @@ public class DataView {
 		this.dataSource = dataSource;
 	}
 
-	public List getColumns() {
+	public Column[] getColumns() {
 		return columns;
 	}
 
-	public void setColumns(ArrayList<Column> columns) {
+	public void setColumns(Column[] columns) {
 		this.columns = columns;
 	}
 
@@ -77,11 +79,11 @@ public class DataView {
 		this.filter = filter;
 	}
 
-	public List getWidgets() {
+	public Widget[] getWidgets() {
 		return widgets;
 	}
 
-	public void setWidgets(List<Widget> widgets) {
+	public void setWidgets(Widget[] widgets) {
 		this.widgets = widgets;
 	}
 
@@ -91,13 +93,15 @@ public class DataView {
 				throw new AxisFault("Widget with given ID already exists");
 			}
 		}
-		widgets.add(widget);
+		List<Widget> widgetList= Arrays.asList(widgets);
+		widgetList.add(widget);
+		widgets=widgetList.toArray(new Widget[widgetList.size()]);
 	}
 
 	public boolean updateWidget(Widget widget) throws AxisFault {
 		try {
 			boolean updateStatus = deleteWidget(widget.getId());
-			widgets.add(widget);
+			addWidget(widget);
 			return updateStatus;
 		}catch(Exception e){
 			throw new AxisFault("Failed to update Widget");
@@ -105,9 +109,9 @@ public class DataView {
 	}
 
 	public Widget getWidget(String widgetID) throws AxisFault {
-		if(widgets==null){
-			widgets=new ArrayList<>();
-		}
+//		if(widgets==null){
+//			widgets=new ArrayList<>();
+//		}
 		for (Widget widget : widgets) {
 			if (widget.getId().equals(widgetID)) {
 				return widget;
@@ -117,9 +121,11 @@ public class DataView {
 	}
 
 	public boolean deleteWidget(String widgetID) throws AxisFault {
-		for (Widget existingWidget : widgets) {
+		List<Widget> widgetList= Arrays.asList(widgets);
+		for (Widget existingWidget : widgetList) {
 			if (existingWidget.getId().equals(widgetID)) {
-				widgets.remove(existingWidget);
+				widgetList.remove(existingWidget);
+				widgets=widgetList.toArray(new Widget[widgetList.size()]);
 				return true;
 			}
 		}

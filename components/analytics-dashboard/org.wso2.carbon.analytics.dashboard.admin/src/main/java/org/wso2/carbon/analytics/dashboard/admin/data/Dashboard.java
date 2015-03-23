@@ -18,14 +18,16 @@ package org.wso2.carbon.analytics.dashboard.admin.data;
 import org.apache.axis2.AxisFault;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Dashboard {
 
 	private String id;
 	private String title;
 	private String group;
-	private ArrayList<Role> roles = new ArrayList<>();
-	private ArrayList<WidgetMetaData> widgets = new ArrayList<>();
+	private String[] roles;
+	private WidgetMetaData[] widgets;
 
 	public String getTitle() {
 		return title;
@@ -51,19 +53,19 @@ public class Dashboard {
 		this.id = id;
 	}
 
-	public ArrayList<Role> getRoles() {
+	public String[] getRoles() {
 		return roles;
 	}
 
-	public void setRoles(ArrayList<Role> roles) {
+	public void setRoles(String[] roles) {
 		this.roles = roles;
 	}
 
-	public ArrayList<WidgetMetaData> getWidgets() {
+	public WidgetMetaData[] getWidgets() {
 		return widgets;
 	}
 
-	public void setWidgets(ArrayList<WidgetMetaData> widgets) {
+	public void setWidgets(WidgetMetaData[] widgets) {
 		this.widgets = widgets;
 	}
 
@@ -73,22 +75,27 @@ public class Dashboard {
 				throw new AxisFault("Widget with given ID already exists in the dashboard");
 			}
 		}
-		widgets.add(widget);
+		List<WidgetMetaData> widgetMetaDataList= Arrays.asList(widgets);
+		widgetMetaDataList.add(widget);
+		widgets=widgetMetaDataList.toArray(new WidgetMetaData[widgetMetaDataList.size()]);
 	}
 
-	public void updateWidget(WidgetMetaData widget) throws AxisFault {
-		deleteWidget(widget.getId());
-		widgets.add(widget);
+	public boolean updateWidget(WidgetMetaData widget) throws AxisFault {
+		boolean updateStatus= deleteWidget(widget.getId());
+		addWidget(widget);
+		return updateStatus;
 	}
 
-	public void deleteWidget(String widgetID) throws AxisFault {
-		for (WidgetMetaData existingWidget : widgets) {
+	public boolean deleteWidget(String widgetID) throws AxisFault {
+		List<WidgetMetaData> widgetMetaDataList=Arrays.asList(widgets);
+		for (WidgetMetaData existingWidget : widgetMetaDataList) {
 			if (existingWidget.getId().equals(widgetID)) {
-				widgets.remove(existingWidget);
-				return;
+				widgetMetaDataList.remove(existingWidget);
+				widgets=widgetMetaDataList.toArray(new WidgetMetaData[widgetMetaDataList.size()]);
+				return true;
 			}
 		}
-		throw new AxisFault("Widget With given ID does not exist in the dashboard");
+		return false;
 	}
 
 }

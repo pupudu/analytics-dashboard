@@ -1,10 +1,8 @@
-org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.class
-org/wso2/carbon/analytics/dashboard/admin/data/Column.class
 org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.class
-org/wso2/carbon/analytics/dashboard/admin/data/Role.class
-org/wso2/carbon/analytics/dashboard/admin/RegistryUtils.class
+org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.class
 org/wso2/carbon/analytics/dashboard/admin/data/WidgetDimensions.class
+org/wso2/carbon/analytics/dashboard/admin/RegistryUtils.class
+org/wso2/carbon/analytics/dashboard/admin/data/Column.class
 org/wso2/carbon/analytics/dashboard/admin/data/Widget.class
-org/wso2/carbon/analytics/dashboard/admin/OMUtils.class
 org/wso2/carbon/analytics/dashboard/admin/data/WidgetMetaData.class
 org/wso2/carbon/analytics/dashboard/admin/data/DataView.class

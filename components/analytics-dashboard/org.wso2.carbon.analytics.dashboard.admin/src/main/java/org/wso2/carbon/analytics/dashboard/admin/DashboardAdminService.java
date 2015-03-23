@@ -52,7 +52,7 @@ public class DashboardAdminService extends AbstractAdmin {
 		}
 		for (String resourceName : resourceNames) {
 			DataView dataView = getDataView(resourceName.replace(DATAVIEWS_DIR, ""));
-			dataView.setWidgets(new ArrayList<Widget>());
+			dataView.setWidgets(new Widget[0]);
 			dataViews.add(dataView);
 		}
 		DataView[] dataViewArray=new DataView[dataViews.size()];
@@ -75,16 +75,13 @@ public class DashboardAdminService extends AbstractAdmin {
 	 * @throws AxisFault
 	 */
 	public void addDataView(DataView dataView) throws AxisFault {
-		try {
-			dataView = OMUtils.processDataView(dataView);
-		} catch (Exception e) {
-		} finally {
+
 			if (!RegistryUtils.isResourceExist(DATAVIEWS_DIR + dataView.getId())) {
 				RegistryUtils.writeResource(DATAVIEWS_DIR + dataView.getId(), dataView);
 			} else {
 				throw new AxisFault("DataView with ID:" + dataView.getId() + " already exists");
 			}
-		}
+
 	}
 
 	/**
@@ -94,16 +91,13 @@ public class DashboardAdminService extends AbstractAdmin {
 	 * @throws AxisFault If a matching dataView does not exist.
 	 */
 	public void updateDataView(DataView dataView) throws AxisFault {
-		try {
-			dataView = OMUtils.processDataView(dataView);
-		} catch (Exception e) {
-		} finally {
+
 			if (RegistryUtils.isResourceExist(DATAVIEWS_DIR + dataView.getId())) {
 				RegistryUtils.writeResource(DATAVIEWS_DIR + dataView.getId(), dataView);
 			} else {
 				throw new AxisFault("DataView with given ID does not exist");
 			}
-		}
+
 	}
 
 	/**
@@ -159,7 +153,7 @@ public class DashboardAdminService extends AbstractAdmin {
 			throws AxisFault {
 		DataView dataView = getDataView(dataViewID);
 		Widget widget = dataView.getWidget(widgetID);
-		dataView.setWidgets(new ArrayList<Widget>());
+		dataView.setWidgets(new Widget[0]);
 		dataView.addWidget(widget);
 		return dataView;
 	}
@@ -170,9 +164,7 @@ public class DashboardAdminService extends AbstractAdmin {
 	 * @throws AxisFault
 	 */
 	public Widget[] getWidgets(String dataViewID) throws AxisFault {
-		List<Widget> widgets = getDataView(dataViewID).getWidgets();
-		Widget[] widgetArray=new Widget[widgets.size()];
-		return widgets.toArray(widgetArray);
+		return getDataView(dataViewID).getWidgets();
 	}
 
 	/**
@@ -212,7 +204,6 @@ public class DashboardAdminService extends AbstractAdmin {
 	 * @throws AxisFault
 	 */
 	public void addDashboard(Dashboard dashboard) throws AxisFault {
-		dashboard = OMUtils.processDashboard(dashboard);
 		if (!RegistryUtils.isResourceExist(DASHBOARDS_DIR + dashboard.getId())) {
 			RegistryUtils.writeResource(DASHBOARDS_DIR + dashboard.getId(), dashboard);
 		} else {
@@ -227,16 +218,13 @@ public class DashboardAdminService extends AbstractAdmin {
 	 * @throws AxisFault If a matching dashboard does not exist.
 	 */
 	public void updateDashboard(Dashboard dashboard) throws AxisFault {
-		try {
-			dashboard = OMUtils.processDashboard(dashboard);
-		} catch (Exception e) {
-		} finally {
+
 			if (RegistryUtils.isResourceExist(DASHBOARDS_DIR + dashboard.getId())) {
 				RegistryUtils.writeResource(DASHBOARDS_DIR + dashboard.getId(), dashboard);
 			} else {
 				throw new AxisFault("Dashboard with name:" + dashboard.getId() + " does not exist");
 			}
-		}
+
 	}
 
 	/**

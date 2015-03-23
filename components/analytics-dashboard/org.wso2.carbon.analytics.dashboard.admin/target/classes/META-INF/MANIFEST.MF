@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1427083949683
+Bnd-LastModified: 1427089669373
 Build-Jdk: 1.7.0_07
 Built-By: dodan
 Bundle-Description: Analytics Dashboard Admin
@@ -16,14 +16,12 @@ DynamicImport-Package: *
 Export-Package: org.wso2.carbon.analytics.dashboard.admin.data;uses:="or
  g.apache.axis2";version="1.0.3.SNAPSHOT",org.wso2.carbon.analytics.dash
  board.admin;uses:="org.apache.axis2,org.wso2.carbon.analytics.dashboard
- .admin.data,org.wso2.carbon.registry.api,org.wso2.carbon.core,org.apach
- e.axiom.om,javax.xml.namespace,org.wso2.carbon.context,com.google.gson"
- ;version="1.0.3.SNAPSHOT"
-Import-Package: com.google.gson;resolution:=optional;version="[1.7,2)",j
- avax.xml.namespace;resolution:=optional,org.apache.axiom.om;resolution:
- =optional,org.apache.axis2;resolution:=optional;version="[1.6,2)",org.w
- so2.carbon.context;resolution:=optional;version="[4.3,5)",org.wso2.carb
- on.core;resolution:=optional;version="[4.3,5)",org.wso2.carbon.registry
- .api;resolution:=optional;version="[1.0,2)",org.wso2.carbon.utils;versi
- on="[4.3,5)"
+ .admin.data,org.wso2.carbon.registry.api,org.wso2.carbon.core,org.wso2.
+ carbon.context,com.google.gson";version="1.0.3.SNAPSHOT"
+Import-Package: com.google.gson;resolution:=optional;version="[1.7,2)",o
+ rg.apache.axis2;resolution:=optional;version="[1.6,2)",org.wso2.carbon.
+ context;resolution:=optional;version="[4.3,5)",org.wso2.carbon.core;res
+ olution:=optional;version="[4.3,5)",org.wso2.carbon.registry.api;resolu
+ tion:=optional;version="[1.0,2)",org.wso2.carbon.utils;version="[4.3,5)
+ "
 Tool: Bnd-1.50.0
