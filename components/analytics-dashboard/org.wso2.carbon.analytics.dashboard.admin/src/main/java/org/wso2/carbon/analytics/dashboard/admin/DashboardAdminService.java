@@ -186,7 +186,6 @@ public class DashboardAdminService extends AbstractAdmin {
 			String[] resourceNames = dashboardsCollection.getChildren();
 			for (String resourceName : resourceNames) {
 				Dashboard dashboard = getDashboard(resourceName.replace(DASHBOARDS_DIR, ""));
-				dashboard.setWidgets(new ArrayList<WidgetMetaData>());
 				dashboards.add(dashboard);
 			}
 			Dashboard[] dashboardArray=new Dashboard[dashboards.size()];
