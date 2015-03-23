@@ -21,6 +21,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Displays widgets
+ * Contains the links to a set of widgets, each residing inside a specific dataView object
+ * */
 public class Dashboard {
 
 	private String id;

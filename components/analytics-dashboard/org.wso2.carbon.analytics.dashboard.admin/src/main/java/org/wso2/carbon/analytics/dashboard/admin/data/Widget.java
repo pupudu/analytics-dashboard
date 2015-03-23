@@ -15,6 +15,9 @@
  */
 package org.wso2.carbon.analytics.dashboard.admin.data;
 
+/**
+ * Holds information about a widget which is instantiated inside a DataView Object
+ */
 public class Widget {
 
 	private String id;

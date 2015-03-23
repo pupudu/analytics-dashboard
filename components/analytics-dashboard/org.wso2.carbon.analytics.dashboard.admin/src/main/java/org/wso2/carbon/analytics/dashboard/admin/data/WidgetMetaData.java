@@ -15,8 +15,15 @@
  */
 package org.wso2.carbon.analytics.dashboard.admin.data;
 
+/**
+ * Contains the Widget ID of a widget which reside inside a dataView and the dimensions needed to place inside a dashboard
+ */
 public class WidgetMetaData {
+
+	/** ID of a widget which resides inside a dataView*/
 	private String id;
+
+	/** Dimensions and the position to place inside a Dashboard*/
 	private WidgetDimensions dimensions;
 
 	public String getId() {

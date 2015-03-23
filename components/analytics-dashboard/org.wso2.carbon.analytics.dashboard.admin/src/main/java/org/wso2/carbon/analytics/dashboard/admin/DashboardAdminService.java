@@ -162,7 +162,7 @@ public class DashboardAdminService extends AbstractAdmin {
 	 * @return DataView object with a single widget in the widget array-list.
 	 * @throws AxisFault
 	 */
-	public DataView getWidget(String dataViewID, String widgetID) //TODO- return the widget itself
+	public DataView getWidgetWithDataViewInfo(String dataViewID, String widgetID)
 			throws AxisFault {
 		DataView dataView = getDataView(dataViewID);
 		Widget widget = dataView.getWidget(widgetID);

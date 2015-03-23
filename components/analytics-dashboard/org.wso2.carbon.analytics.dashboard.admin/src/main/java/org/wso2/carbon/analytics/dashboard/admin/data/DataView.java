@@ -22,6 +22,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Main object which contains an array of widgets and other data required for widget creation
+ * Points to a data-source which could be a BAM table or a CEP stream
+ * */
 public class DataView {
 	private String id;
 	private String displayName;

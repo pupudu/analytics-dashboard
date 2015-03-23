@@ -15,6 +15,9 @@
  */
 package org.wso2.carbon.analytics.dashboard.admin.data;
 
+/**
+ * Dimensions of a widget which will be created inside a Dashboard object
+ */
 public class WidgetDimensions {
 	private int column;
 	private int row;
