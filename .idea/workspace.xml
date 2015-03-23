@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76da25f2-658f-471a-a573-4e2540df6be7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/OMUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Role.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/OMUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/Role.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.class" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.class" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/DataView.class" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/DataView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/org.wso2.carbon.analytics.dashboard.admin-1.0.3-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/org.wso2.carbon.analytics.dashboard.admin-1.0.3-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/DataView.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/DataView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="carbon-analytics.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -137,11 +124,11 @@
       <file leaf-file-name="DashboardAdminService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.862745" vertical-offset="0" max-vertical-offset="4428">
-              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.764706" vertical-offset="3024" max-vertical-offset="4770">
+              <caret line="85" column="28" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1427089646870" expanded="true" signature="4564:4752" placeholder="..." />
+                <marker date="1427090895402" expanded="true" signature="5063:5261" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -871,7 +858,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="21" width="1543" height="879" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -891,7 +878,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1125916" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30446368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22718188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.326972" sideWeight="0.49902788" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -961,7 +948,7 @@
           <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1427089646870" expanded="true" signature="4564:4752" placeholder="..." />
+            <marker date="1427090895402" expanded="true" signature="5063:5261" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1039,7 +1026,7 @@
           <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1427089646870" expanded="true" signature="4564:4752" placeholder="..." />
+            <marker date="1427090895402" expanded="true" signature="5063:5261" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1079,7 +1066,7 @@
           <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1427089646870" expanded="true" signature="4564:4752" placeholder="..." />
+            <marker date="1427090895402" expanded="true" signature="5063:5261" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1324,11 +1311,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.862745" vertical-offset="0" max-vertical-offset="4428">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.764706" vertical-offset="3024" max-vertical-offset="4770">
+          <caret line="85" column="28" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1427089646870" expanded="true" signature="4564:4752" placeholder="..." />
+            <marker date="1427090895402" expanded="true" signature="5063:5261" placeholder="..." />
           </folding>
         </state>
       </provider>
