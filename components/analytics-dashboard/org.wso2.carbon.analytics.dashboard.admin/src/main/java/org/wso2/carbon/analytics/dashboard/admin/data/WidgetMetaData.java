@@ -20,10 +20,14 @@ package org.wso2.carbon.analytics.dashboard.admin.data;
  */
 public class WidgetMetaData {
 
-	/** ID of a widget which resides inside a dataView*/
+	/**
+	 * ID of a widget which resides inside a dataView
+	 */
 	private String id;
 
-	/** Dimensions and the position to place inside a Dashboard*/
+	/**
+	 * Dimensions and the position to place inside a Dashboard
+	 */
 	private WidgetDimensions dimensions;
 
 	public String getId() {

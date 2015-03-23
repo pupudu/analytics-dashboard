@@ -17,6 +17,8 @@ package org.wso2.carbon.analytics.dashboard.admin;
 
 import com.google.gson.Gson;
 import org.apache.axis2.AxisFault;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.wso2.carbon.context.CarbonContext;
 import org.wso2.carbon.context.RegistryType;
 import org.wso2.carbon.registry.api.Collection;
@@ -36,6 +38,11 @@ public class RegistryUtils {
 	private static Registry registry = carbonContext.getRegistry(RegistryType.SYSTEM_GOVERNANCE);
 
 	/**
+	 * Logger
+	 */
+	private static Log logger = LogFactory.getLog(RegistryUtils.class);
+
+	/**
 	 * Writes an object to the given registry url and registry type as a Json String.
 	 *
 	 * @param url     Relative url to where the resource will be saved.
@@ -52,7 +59,9 @@ public class RegistryUtils {
 			registry.put(url, resource);
 
 		} catch (Exception re) {
-			throw new AxisFault(re.getMessage(), re);
+			String errorMessage = "Unable to write resource at url:" + url;
+			logger.error(errorMessage);
+			throw new AxisFault(errorMessage);
 		}
 	}
 
@@ -63,7 +72,7 @@ public class RegistryUtils {
 	 * @param targetClass Target object type which the json content will be mapped into.
 	 * @return Object by mapping into a given class, the json read from the registry.
 	 */
-	protected static Object readResource(String url, Class targetClass) throws AxisFault {//TODO - close streams
+	protected static Object readResource(String url, Class targetClass) throws AxisFault {
 		InputStream contentStream = null;
 		InputStreamReader isr = null;
 		try {
@@ -76,22 +85,25 @@ public class RegistryUtils {
 			return gson.fromJson(isr, targetClass);
 
 		} catch (Exception e) {
-			throw new AxisFault(e.getMessage(), e);
-		}
-		finally{
+			String errorMessage = "Unable to read resource from url:" + url;
+			logger.error(errorMessage);
+			throw new AxisFault(errorMessage);
+		} finally {
 			closeQuitely(contentStream);
 			closeQuitely(isr);
 		}
 	}
 
-	/**Close colseables*/
-	private static void closeQuitely(Closeable closeable){
+	/**
+	 * Close colseables
+	 */
+	private static void closeQuitely(Closeable closeable) {
 		try {
 			if (closeable != null) {
 				closeable.close();
 			}
 		} catch (IOException ignore) {
-        /* ignore */
+	    /* ignore */
 		}
 	}
 
@@ -106,6 +118,8 @@ public class RegistryUtils {
 		try {
 			return registry.resourceExists(url);
 		} catch (RegistryException e) {
+			String errorMessage = "Unable perform isResourceExists check";
+			logger.error(errorMessage);
 			throw new AxisFault(e.getMessage(), e);
 		}
 	}
@@ -122,20 +136,24 @@ public class RegistryUtils {
 		try {
 			return (Collection) registry.get(collectionURL);
 		} catch (Exception e) {
-			throw new AxisFault(e.getMessage(), e);
+			String errorMessage = "Unable to read resource collection from url:" + collectionURL;
+			logger.error(errorMessage);
+			throw new AxisFault(errorMessage);
 		}
 	}
 
 	/**
-	 *
 	 * @param url url of the resource to be deleted from the registry.
 	 * @throws AxisFault
 	 */
-	protected static void deleteResource(String url) throws AxisFault {
+	protected static boolean deleteResource(String url) throws AxisFault {
 		try {
 			registry.delete(url);
+			return true;
 		} catch (Exception e) {
-			throw new AxisFault(e.getMessage(), e);
+			String errorMessage = "Unable to delete resource at url:" + url;
+			logger.error(errorMessage);
+			return false;
 		}
 	}
 

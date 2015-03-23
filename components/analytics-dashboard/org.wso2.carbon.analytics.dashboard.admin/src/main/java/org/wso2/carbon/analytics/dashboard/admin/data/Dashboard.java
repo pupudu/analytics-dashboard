@@ -17,14 +17,13 @@ package org.wso2.carbon.analytics.dashboard.admin.data;
 
 import org.apache.axis2.AxisFault;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
  * Displays widgets
  * Contains the links to a set of widgets, each residing inside a specific dataView object
- * */
+ */
 public class Dashboard {
 
 	private String id;
@@ -79,23 +78,23 @@ public class Dashboard {
 				throw new AxisFault("Widget with given ID already exists in the dashboard");
 			}
 		}
-		List<WidgetMetaData> widgetMetaDataList= Arrays.asList(widgets);
+		List<WidgetMetaData> widgetMetaDataList = Arrays.asList(widgets);
 		widgetMetaDataList.add(widget);
-		widgets=widgetMetaDataList.toArray(new WidgetMetaData[widgetMetaDataList.size()]);
+		widgets = widgetMetaDataList.toArray(new WidgetMetaData[widgetMetaDataList.size()]);
 	}
 
 	public boolean updateWidget(WidgetMetaData widget) throws AxisFault {
-		boolean updateStatus= deleteWidget(widget.getId());
+		boolean updateStatus = deleteWidget(widget.getId());
 		addWidget(widget);
 		return updateStatus;
 	}
 
 	public boolean deleteWidget(String widgetID) throws AxisFault {
-		List<WidgetMetaData> widgetMetaDataList=Arrays.asList(widgets);
+		List<WidgetMetaData> widgetMetaDataList = Arrays.asList(widgets);
 		for (WidgetMetaData existingWidget : widgetMetaDataList) {
 			if (existingWidget.getId().equals(widgetID)) {
 				widgetMetaDataList.remove(existingWidget);
-				widgets=widgetMetaDataList.toArray(new WidgetMetaData[widgetMetaDataList.size()]);
+				widgets = widgetMetaDataList.toArray(new WidgetMetaData[widgetMetaDataList.size()]);
 				return true;
 			}
 		}
