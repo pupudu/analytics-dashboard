@@ -38,49 +38,49 @@
 
         <operation name="addDataView">
             <parameter name="AuthorizationAction" locked="true">
-                /permission/admin/monitor/dashboard/add
+                /permission/admin/monitor/dashboard/edit
             </parameter>
         </operation>
 
         <operation name="updateDataView">
             <parameter name="AuthorizationAction" locked="true">
-                /permission/admin/write
+                /permission/admin/monitor/dashboard/edit
             </parameter>
         </operation>
 
         <operation name="deleteDataView">
             <parameter name="AuthorizationAction" locked="true">
-                /permission/admin/write
+                /permission/admin/monitor/dashboard/edit
             </parameter>
         </operation>
 
         <operation name="addWidget">
             <parameter name="AuthorizationAction" locked="true">
-                /permission/admin/write
+                /permission/admin/monitor/dashboard/edit
             </parameter>
         </operation>
 
         <operation name="addDashboard">
             <parameter name="AuthorizationAction" locked="true">
-                /permission/admin/write
+                /permission/admin/monitor/dashboard/edit
             </parameter>
         </operation>
 
         <operation name="updateDashboard">
             <parameter name="AuthorizationAction" locked="true">
-                /permission/admin/write
+                /permission/admin/monitor/dashboard/edit
             </parameter>
         </operation>
 
         <operation name="addWidgetToDashboard">
             <parameter name="AuthorizationAction" locked="true">
-                /permission/admin/write
+                /permission/admin/monitor/dashboard/edit
             </parameter>
         </operation>
 
         <operation name="updateWidgetInDashboard">
             <parameter name="AuthorizationAction" locked="true">
-                /permission/admin/write
+                /permission/admin/monitor/dashboard/edit
             </parameter>
         </operation>
 

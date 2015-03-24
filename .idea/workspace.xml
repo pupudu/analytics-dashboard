@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76da25f2-658f-471a-a573-4e2540df6be7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.class" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/DataView.class" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/DataView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/Widget.class" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/org/wso2/carbon/analytics/dashboard/admin/data/Widget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/DataView.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/DataView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/RegistryUtils.java" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/RegistryUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/org.wso2.carbon.analytics.dashboard.admin.iml" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/org.wso2.carbon.analytics.dashboard.admin.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/resources/META-INF/services.xml" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/resources/META-INF/services.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/META-INF/services.xml" afterPath="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/target/classes/META-INF/services.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="carbon-analytics.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -130,20 +120,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="services.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/resources/META-INF/services.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="186" max-vertical-offset="1764">
-              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.5409836" vertical-offset="1212" max-vertical-offset="1764">
+              <caret line="82" column="56" selection-start-line="82" selection-start-column="56" selection-end-line="82" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistryUtils.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RegistryUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/RegistryUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6782787" vertical-offset="47" max-vertical-offset="2736">
+            <state vertical-scroll-proportion="0.0" vertical-offset="47" max-vertical-offset="2736">
               <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -195,13 +185,13 @@
         <option value="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetDimensions.java" />
         <option value="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/WidgetMetaData.java" />
         <option value="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/UserAdminClient.java" />
-        <option value="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/resources/META-INF/services.xml" />
         <option value="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/RegistryUtils.java" />
         <option value="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/test.java" />
         <option value="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/DataView.java" />
         <option value="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Dashboard.java" />
         <option value="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/data/Widget.java" />
         <option value="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/DashboardAdminService.java" />
+        <option value="$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/resources/META-INF/services.xml" />
       </list>
     </option>
   </component>
@@ -1040,7 +1030,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="21" width="1543" height="879" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1057,7 +1047,7 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.115256496" sideWeight="0.50094515" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.115256496" sideWeight="0.49905482" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.115256496" sideWeight="0.49905482" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3484344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1430,14 +1420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/resources/META-INF/services.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="186" max-vertical-offset="1764">
-          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/local/java/jdk1.7.0_07/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1278" max-vertical-offset="10494">
@@ -1508,11 +1490,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/java/org/wso2/carbon/analytics/dashboard/admin/RegistryUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6782787" vertical-offset="47" max-vertical-offset="2736">
+        <state vertical-scroll-proportion="0.0" vertical-offset="47" max-vertical-offset="2736">
           <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/analytics-dashboard/org.wso2.carbon.analytics.dashboard.admin/src/main/resources/META-INF/services.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5409836" vertical-offset="1212" max-vertical-offset="1764">
+          <caret line="82" column="56" selection-start-line="82" selection-start-column="56" selection-end-line="82" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
