@@ -95,9 +95,8 @@ public class DataView {
 				throw new AxisFault("Widget with given ID already exists");
 			}
 		}
-		List<Widget> widgetList = Arrays.asList(widgets);
-		widgetList.add(widget);
-		widgets = widgetList.toArray(new Widget[widgetList.size()]);
+		widgets=Arrays.copyOf(widgets,widgets.length+1);
+		widgets[widgets.length-1]=widget;
 	}
 
 	public boolean updateWidget(Widget widget) throws AxisFault {
@@ -111,9 +110,6 @@ public class DataView {
 	}
 
 	public Widget getWidget(String widgetID) throws AxisFault {
-		//		if(widgets==null){
-		//			widgets=new ArrayList<>();
-		//		}
 		for (Widget widget : widgets) {
 			if (widget.getId().equals(widgetID)) {
 				return widget;

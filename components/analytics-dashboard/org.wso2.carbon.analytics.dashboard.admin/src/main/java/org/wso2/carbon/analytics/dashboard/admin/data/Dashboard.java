@@ -78,9 +78,8 @@ public class Dashboard {
 				throw new AxisFault("Widget with given ID already exists in the dashboard");
 			}
 		}
-		List<WidgetMetaData> widgetMetaDataList = Arrays.asList(widgets);
-		widgetMetaDataList.add(widget);
-		widgets = widgetMetaDataList.toArray(new WidgetMetaData[widgetMetaDataList.size()]);
+		widgets=Arrays.copyOf(widgets,widgets.length+1);
+		widgets[widgets.length-1]=widget;
 	}
 
 	public boolean updateWidget(WidgetMetaData widget) throws AxisFault {
